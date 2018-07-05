@@ -1,0 +1,59 @@
+body
+{
+	margin-right:0;
+	margin-top:0;
+	margin-left:0;
+}
+
+h1
+{
+    color: white;
+    font-size: 45px;
+    margin-bottom: 0;
+	margin-top:0;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#titre 
+{
+	background-color:rgb(40,140,240);
+}
+
+#bloc1
+{
+	padding: 30px;
+	flex : 2;
+}
+
+.box
+{
+	border: 2px rgb(250,180,30) solid;
+	border-radius: 8px;
+	margin: 20px
+}
+#conteneur1
+{
+	display: flex;
+	flex-direction: row;
+}
+#conteneur2
+{
+	flex :1;
+}
+
+#tit
+{
+	width: 90%;
+}
+#corp
+{
+	width: 90%;
+	height: 200px;
+	max-width: 90%;
+	min-width: 90%;
+}
+.champ
+{
+	padding-left: 5%;
+}

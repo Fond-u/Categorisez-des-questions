@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/stack_icon.png') }}" />
+    <title>Recommandation de Tag</title>
+</head>
+<body>
+	<div id="titre">
+		<h1 align="center"> API de recommandation de tag </h1>
+	</div>
+	
+	<div id="conteneur1"> 
+		<div id="bloc1" class="box">
+			<p><strong>Instruction :</strong> Entrez un titre et votre question puis validez pour obtenir quelque recommandations de tags. </p>
+			<p><strong>Note :</strong> L'analyse et la préparation du texte sont basées sur la langue anglaise. </p>
+
+			<form method="get" action="/res/" >
+				<div class="champ">
+					<label for="tit">Titre :</label><br />
+					<input type="text" name="tit" id="tit" /> 
+					<br />
+					<br />
+					<label for="corp">Question :</label><br />
+					<textarea name="corp" id="corp"></textarea>  
+					<br />
+					<br />
+					<input type="submit" value="Valider" />  
+				</div>
+					      	
+			</form>
+
+		</div>
+		<div id="conteneur2">
+			<div id="bloc2" class="box">
+			</div>
+			<div id="bloc3" class="box">
+			</div>
+		</div>	
+	</div>
+</body>
+</html>
