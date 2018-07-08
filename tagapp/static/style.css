@@ -25,6 +25,14 @@ h1
 	padding: 30px;
 	flex : 2;
 }
+#bloc2
+{
+	padding: 15px;
+}
+#bloc3
+{
+	padding: 15px;
+}
 
 .box
 {
@@ -56,4 +64,14 @@ h1
 .champ
 {
 	padding-left: 5%;
+}
+
+.text
+{
+	text-align: justify;
+}
+#btremplir
+{
+	margin: 5%;
+	text-align: center;
 }
