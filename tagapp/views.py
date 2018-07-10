@@ -7,6 +7,7 @@ app = Flask(__name__)
 app.config.from_object('config')
 
 soq = SetOfQuestions(app.config['EX'])
+nltk.download('popular')
 
 @app.route('/')
 @app.route('/index/', methods=['GET', 'POST'])
