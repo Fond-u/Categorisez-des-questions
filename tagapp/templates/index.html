@@ -30,9 +30,20 @@
 					<br />
 					<input type="submit" name = "action" value="Valider" />  
 					<input type="submit" name = "action" value="Clear" /> 
+					{% if last_act == "Valider" %}
+						<br />
+						<br />
+						<input type="submit" name = "action" value="Corpus" /> 
+					{% endif %}
+					<input type="hidden" name = "id_ex" value= "{{ id_ex }}" />
+					<input type="hidden" name = "val_tag_lda" value= "{{ val_tag_lda }}" />
 					</form>
 				</div>
-					      	
+				
+				{% if voir_corpus == 1: %} 
+					<p style=" text-decoration: underline; font-style: italic; " >corpus :</p>
+					<p style=" font-style: italic; ">{{ corpus }}</p>	
+				{% endif %}    	
 			</form>
 
 		</div>
@@ -55,10 +66,16 @@
 				<h2 align="center" style=" text-decoration: underline; ">Resultat</h2>
 				<h4 style=" text-decoration: underline;"> Tags réel : </h4>
 				{% for tag_true in val_tag_true: %}
-					<span>{{ tag_true }}</span><span>  </span>
+					<span class="tag">{{ tag_true }}</span><span> </span>
 				{% endfor %}	
 				<h4 style=" text-decoration: underline;"> Tags proposé par un appentissage non-supervisé : </h4>
+				{% for tag_lda in val_tag_lda: %}
+					<span class="tag">{{ tag_lda }}</span><span> </span>
+				{% endfor %}
 				<h4 style=" text-decoration: underline;"> Tags proposé par un appentissage supervisé : </h4>
+				{% for tag_rl in val_tag_rl: %}
+					<span class="tag">{{ tag_rl }}</span><span> </span>
+				{% endfor %}
 			</div>
 		</div>	
 	</div>

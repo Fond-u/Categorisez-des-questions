@@ -75,3 +75,8 @@ h1
 	margin: 5%;
 	text-align: center;
 }
+.tag
+{
+    background-color: rgb(200,240,255);
+    padding: 5px;
+}
