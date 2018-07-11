@@ -56,7 +56,7 @@ def index():
 			else:
 				tag = []
 			tag_lda = nltk.RegexpTokenizer(r'[a-zA-Z0-9.#_+-]+').tokenize(request.form['val_tag_lda'])
-			tag_rl = []
+			tag_rl = nltk.RegexpTokenizer(r'[a-zA-Z0-9.#_+-]+').tokenize(request.form['val_tag_rl'])
 			
 			voir_corpus = 1
 		else:
