@@ -15,7 +15,7 @@
 	<div id="conteneur1"> 
 		<div id="bloc1" class="box">
 			<h2 align="center" style=" text-decoration: underline; ">Posez votre question</h2>
-			<p><strong>Instruction :</strong> Entrez un titre et votre question puis validez pour obtenir quelque recommandations de tags. </p>
+			<p><strong>Instruction :</strong> Entrez un titre et votre question puis validez pour obtenir quelques recommandations de tag. </p>
 			<p><strong>Note :</strong> L'analyse et la préparation du texte sont basées sur la langue anglaise. </p>
 
 			<form method="post" action="/index/" >
@@ -29,7 +29,7 @@
 					<br />
 					<br />
 					<input type="submit" name = "action" value="Valider" />  
-					<input type="submit" name = "action" value="Clear" /> 
+					<input type="submit" name = "action" value="Effacer" /> 
 					{% if last_act == "Valider" %}
 						<br />
 						<br />
@@ -54,7 +54,7 @@
 				<br/>
 				<h2 align="center" style=" text-decoration: underline; ">Remplissage automatique</h2>
 				<p class="text">
-					Pour tester l'API de recommandation de tag, vous pouvez remplir les champs automatiquement en cliquant sur le bouton "remplir". Une question sera selectionnée aleatoirement parmi un pannel de 500 questions extraitent du forum de stacoverflow.
+					Pour tester l'API de recommandation de tag, vous pouvez remplir les champs automatiquement en cliquant sur le bouton "remplir". Une question sera selectionnée aléatoirement parmi un panel de 500 questions extraitent du forum de stacoverflow.
 				</p>
 				<form method="post" action="/index/" >
 					<div id="btremplir">
@@ -65,15 +65,15 @@
 			</div>
 			<div id="bloc3" class="box">
 				<h2 align="center" style=" text-decoration: underline; ">Resultat</h2>
-				<h4 style=" text-decoration: underline;"> Tags réel : </h4>
+				<h4 style=" text-decoration: underline;"> Tags réels : </h4>
 				{% for tag_true in val_tag_true: %}
 					<span class="tag">{{ tag_true }}</span><span> </span>
 				{% endfor %}	
-				<h4 style=" text-decoration: underline;"> Tags proposé par un appentissage non-supervisé : </h4>
+				<h4 style=" text-decoration: underline;"> Tags proposés par un appentissage non-supervisé : </h4>
 				{% for tag_lda in val_tag_lda: %}
 					<span class="tag">{{ tag_lda }}</span><span> </span>
 				{% endfor %}
-				<h4 style=" text-decoration: underline;"> Tags proposé par un appentissage supervisé : </h4>
+				<h4 style=" text-decoration: underline;"> Tags proposés par un appentissage supervisé : </h4>
 				{% for tag_rl in val_tag_rl: %}
 					<span class="tag">{{ tag_rl }}</span><span> </span>
 				{% endfor %}
